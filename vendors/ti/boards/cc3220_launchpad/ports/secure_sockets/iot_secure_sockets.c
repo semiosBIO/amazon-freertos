@@ -1377,6 +1377,7 @@ void SimpleLinkSockEventHandler( SlSockEvent_t * pSlSockEvent )
                      * SL_SSL_NOTIFICATION_WRONG_ROOT_CA is received and we unblock the waiting
                      * task upon receiving SL_SSL_NOTIFICATION_WRONG_ROOT_CA. */
                     SOCKETS_PRINT( ( "[SimpleLinkSockEventHandler ERROR]: Root CA in file system did not sign the chain.\r\n" ) );
+                    SOCKETS_PRINT( ("[SimpleLinkSockEventHandler ERROR]: Pleaseinstallthe followingRootCertificate:\n\r %s\n\r",pSlSockEvent->SocketAsyncEvent.SockAsyncData.pExtraInfo) );
 
                     break;
 
